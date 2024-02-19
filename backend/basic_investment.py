@@ -29,7 +29,7 @@ def get_arguments():
 
     parser.add_argument("--monthly", help="How much that will be invested on a monthly basis", type=float, default=0)
     parser.add_argument("--yearly", help="How much that will be invested on a yearly basis", type=float, default=0)
-    parser.add_argument("--growth", help="The average expected growth each year", type=float, default=0.08)
+    parser.add_argument("--growth", help="The average expected growth each year", type=float, default=8)
     parser.add_argument("--years_of_growth", help="The number of years_of_growth you will let the money grow", type=int)
 
     return parser.parse_args()
@@ -42,7 +42,7 @@ def calculate(args):
     monthly_data = [current_value]
     for i in range(args.years_of_growth):
         for i in range(NUM_MONTHS):
-            current_value *= (1 + args.growth) ** (1 / NUM_MONTHS)
+            current_value *= (1 + (args.growth / 100)) ** (1 / NUM_MONTHS)
             current_value += args.monthly
             monthly_data.append(current_value)
         current_value += args.yearly

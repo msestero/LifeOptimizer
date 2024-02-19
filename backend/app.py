@@ -12,7 +12,7 @@ def basic_investment():
     initial_investment = request.args.get('initial_investment', default="0", type=str)
     monthly = request.args.get('monthly', default="0", type=str)
     yearly = request.args.get('yearly', default="0", type=str)
-    growth = request.args.get('growth', default="0.08", type=str)  # Default growth rate of 8%
+    growth = request.args.get('growth', default="8", type=str)  # Default growth rate of 8%
     years_of_growth = request.args.get('years_of_growth', default="1", type=str)  # Default to 1 year for simplicity
 
     # Prepare the command to call the script with arguments

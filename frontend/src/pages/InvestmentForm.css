@@ -1,0 +1,41 @@
+/* InvestmentForm.css */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px 30px;
+  background-color: #bfc5c9;
+}
+
+.chartContainerStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 80vh;
+}
+
+.chartAreaStyle {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
+
+.formAreaStyle {
+  margin: auto;
+  background-color: #62d2a2;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 10vh;
+}
+
+.titleStyle {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+}
